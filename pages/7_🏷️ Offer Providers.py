@@ -225,7 +225,7 @@ with st.expander("Create an Offer", expanded=False):
         offer_type_input = st.selectbox("Offer Type", ['CARD_LINKED', 'AFFILIATE', 'CATEGORICAL'])
         offer_reward_type_input = st.selectbox("Reward Type", ['FIXED', 'PERCENTAGE'])
         offer_reward_value = st.text_input("Offer Reward Value (for FIXED)", placeholder="40")
-        offer_reward_rate = st.text_input("Offer Reward Rate (for PERCENTAGE", placeholder="5")
+        offer_reward_rate = st.text_input("Offer Reward Rate (for PERCENTAGE)", placeholder="5")
         offer_terms_input = st.text_area("Offer Terms", placeholder="terms")
         st.markdown("### Merchant Categories")
         offer_merchant_category_code_input = st.text_input("Merchant Category Code [optional]", placeholder="8912")
