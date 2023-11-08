@@ -18,6 +18,20 @@ def post_request(request_url, data):
     return response
 
 
+# default POST REQUEST for UI API
+def post_request_ui(request_url, data, token):
+    print(request_url)
+    print(data)
+    print(token)
+    r = requests.post(
+        request_url,
+        headers={"X-Cardholder-Token": token, "Content-Type": "application/json"},
+        json=data
+    )
+    response = r.json()
+    return response
+
+
 # default GET REQUEST
 def get_request(request_url):
     r = requests.get(

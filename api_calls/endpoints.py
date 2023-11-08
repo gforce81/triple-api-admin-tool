@@ -82,7 +82,8 @@ endpoints = {
         "POST_userEvent": "/partner/user-events"
     },
     "ui-api": {
-        "POST_initiateSession": "/initiate-session"
+        "POST_initiateSession": "/initiate-session",
+        "POST_offersHome": "/offers-home"
     }
 }
 
