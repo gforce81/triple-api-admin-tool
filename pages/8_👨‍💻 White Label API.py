@@ -31,13 +31,17 @@ st.divider()
 response = {}
 view_as_dataframe = False
 display_images = False
+show_test_amplifi = False
 dataframe_property = ''
 
 with st.expander("Initiate Session", expanded=False):
     with st.form("Initiate Session"):
         init_session_cardholder_input = st.text_input("Card Account ID", placeholder="card_account_id")
+        init_session_amplifi = st.checkbox("Generate ampliFI Test URLs")
         init_session_button = st.form_submit_button("Start")
     if init_session_button:
+        if init_session_amplifi:
+            show_test_amplifi = True
         data = {
             "card_account_id": init_session_cardholder_input
         }
@@ -124,6 +128,10 @@ if view_as_dataframe:
     st.dataframe(df)
 else:
     st.json(response)
+    if show_test_amplifi:
+        amplifi_response = ui_api.test_amplifi(response['token'])
+        st.json(amplifi_response)
+
 
 if display_images:
     for idx, section in enumerate(response['sections']):

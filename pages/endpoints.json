@@ -13,7 +13,7 @@
       "prod": {
         "base_url": "https://api.tripleup.dev",
         "auth_url": "https://auth.tripleup.dev/oauth2/token",
-        "ui_base_url": "https://ui-api.partners.tripleup.dev"
+        "ui_base_url": "https://ui-api.tripleup.dev"
       }
     },
     "card_accounts": {
