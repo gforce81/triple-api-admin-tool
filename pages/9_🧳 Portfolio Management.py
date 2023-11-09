@@ -33,7 +33,7 @@ with st.expander("List Publishers", expanded=False):
         response = portfolio_management.list_publishers()
 
 with st.expander("Create a Publisher", expanded=False):
-    with st.form("Create a Publishert"):
+    with st.form("Create a Publisher"):
         publisher_assumed_name_input = st.text_input("Publisher Name", placeholder="assumed_name")
         publisher_external_id_input = st.text_input("Publisher External ID", placeholder="external_id")
         revenue_share_input = st.text_input("Revenue Share [optional]", placeholder="5")
