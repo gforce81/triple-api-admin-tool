@@ -67,6 +67,8 @@ def store_config(environment):
     config['providers_updateOffers'] = endpoints.endpoints['offer_providers']['PATCH_updateOffers']
     config['ui_initiate'] = endpoints.endpoints['ui-api']['POST_initiateSession']
     config['ui_offersHome'] = endpoints.endpoints['ui-api']['POST_offersHome']
+    config['portfolio_listPublishers'] = endpoints.endpoints['portfolio_management']['GET_listPublishers']
+    config['portfolio_createPublishers'] = endpoints.endpoints['portfolio_management']['POST_createPublisher']
 
 
 # Creating a Triple Auth Token

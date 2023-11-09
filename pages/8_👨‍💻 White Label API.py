@@ -127,11 +127,11 @@ if view_as_dataframe:
     df = pd.json_normalize(response[dataframe_property])
     st.dataframe(df)
 else:
-    st.json(response)
+    st.json(response, expanded=False)
     if show_test_amplifi:
         amplifi_response = ui_api.test_amplifi(response['token'])
-        st.json(amplifi_response)
-
+        for url in amplifi_response['urls']:
+            st.markdown("- [" + url + "](" + url + ")")
 
 if display_images:
     for idx, section in enumerate(response['sections']):

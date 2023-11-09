@@ -54,14 +54,22 @@ with st.expander("Create Card Account", expanded=False):
         default_postal_code_input = st.text_input("Default Postal Code", placeholder="90210")
         external_id_input = st.text_input("External ID", placeholder="external ID as string")
         status_input = st.selectbox("Enrollment Status", ["ENROLLED", "NOT_ENROLLED", "CLOSED"])
+        publisher_external_id_input = st.text_input("Publisher External ID [optional]",
+                                                    placeholder="publisher_external_id")
         create_card_account_button = st.form_submit_button("Create")
     if create_card_account_button:
+        if len(publisher_external_id_input) > 0:
+            publisher = publisher_external_id_input
+        else:
+            publisher = None
+
         data = {
             "card_program_external_id": card_program_external_input,
             "default_country_code": default_country_code_input,
             "default_postal_code": default_postal_code_input,
             "external_id": external_id_input,
-            "status": status_input
+            "status": status_input,
+            "publisher_external_id": publisher
         }
         response = card_accounts.create_card_account(data)
 

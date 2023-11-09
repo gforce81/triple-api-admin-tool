@@ -50,6 +50,7 @@ with st.expander("Create Card Program", expanded=False):
         program_currency_input = st.text_input("Currency", placeholder="USD")
         loyalty_unit_input = st.text_input("Loyalty Unit [optional]", placeholder="MILES or POINTS")
         loyalty_conversion_input = st.text_input("Loyalty Conversion Rate [optional]", placeholder="0")
+        publisher_external_id_input = st.text_input("Publisher External ID [optional]", placeholder="publisher_external_id")
         create_program_button = st.form_submit_button("Create")
     if create_program_button:
         try:
@@ -60,6 +61,11 @@ with st.expander("Create Card Program", expanded=False):
         if loyalty_unit_input not in ['POINTS', 'MILES']:
             loyalty_unit_input = None
 
+        if len(publisher_external_id_input) > 0:
+            publisher = publisher_external_id_input
+        else:
+            publisher = None
+
         data = {
             "card_bins": card_bins_input.split(","),
             "default_country_code": default_country_code_input,
@@ -69,7 +75,8 @@ with st.expander("Create Card Program", expanded=False):
             "description": description_input,
             "program_currency": program_currency_input,
             "loyalty_unit": loyalty_unit_input,
-            "loyalty_conversion_rate": converted_loyalty_rate
+            "loyalty_conversion_rate": converted_loyalty_rate,
+            "publisher_external_id": publisher
         }
         response = card_programs.create_card_program(data)
 
