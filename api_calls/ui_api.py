@@ -81,6 +81,9 @@ def test_amplifi(token):
         "https://we-cu.rewards.tripleup.dev",
         "https://wescom-ucla.rewards.tripleup.dev",
         "https://wescom.rewards.tripleup.dev",
+        "https://nugget-bluestone-fcu.rewards.tripleup.dev",
+        "https://evergreendirect-cu.rewards.tripleup.dev",
+        "https://ourcommunity-cu.rewards.tripleup.dev"
     ]
     list_of_urls_with_token = []
 
