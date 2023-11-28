@@ -77,7 +77,7 @@ with st.expander("Create a Filter", expanded=False):
                 "offer_ids": offers
             }
         }
-        if patch_selection == "Patch":
+        if patch_selection:
             response = offer_filters.patch_offer_filters(filter_id_input, data)
         else:
             response = offer_filters.create_offer_filters(data)
