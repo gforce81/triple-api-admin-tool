@@ -36,6 +36,9 @@ with st.expander("List Filters", expanded=False):
 
 with st.expander("Create a Filter", expanded=False):
     with st.form("Create a Filter"):
+        patch_selection = st.radio("New or Patch", ["New", "Patch"])
+        if patch_selection == "Patch":
+            filter_id_input = st.text_input("Filter ID. All other fields are [optional]", placeholder="filter_id")
         filter_description_input = st.text_input("Filter Description", placeholder="readable description")
         filter_name_input = st.text_input("Filter Name", placeholder="name")
         filter_activated_input = st.checkbox("Activated", value=False)
@@ -74,7 +77,10 @@ with st.expander("Create a Filter", expanded=False):
                 "offer_ids": offers
             }
         }
-        response = offer_filters.create_offer_filters(data)
+        if patch_selection == "Patch":
+            response = offer_filters.patch_offer_filters(filter_id_input, data)
+        else:
+            response = offer_filters.create_offer_filters(data)
 
 
 st.write("")

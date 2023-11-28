@@ -21,3 +21,12 @@ def list_offer_filters():
     response = core_requests.get_request(request_url)
     return response
 
+
+# patch a filter
+def patch_offer_filters(filter_id, data):
+    request_url = (streamlit.session_state.config['base_url'] +
+                   streamlit.session_state.config['filters_patchOfferFilters'])
+    request_url = request_url.replace('{filter_id}', filter_id)
+    data = data
+    response = core_requests.patch_request(request_url, data)
+    return response

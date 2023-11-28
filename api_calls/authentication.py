@@ -71,6 +71,7 @@ def store_config(environment):
     config['portfolio_createPublishers'] = endpoints.endpoints['portfolio_management']['POST_createPublisher']
     config['filters_listOfferFilters'] = endpoints.endpoints['offer_filters']['GET_listFilters']
     config['filters_createOfferFilters'] = endpoints.endpoints['offer_filters']['POST_createFilter']
+    config['filters_patchOfferFilters'] = endpoints.endpoints['offer_filters']['PATCH_updateFilter']
 
 
 # Creating a Triple Auth Token
