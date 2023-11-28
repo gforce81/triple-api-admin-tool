@@ -36,8 +36,8 @@ with st.expander("List Filters", expanded=False):
 
 with st.expander("Create a Filter", expanded=False):
     with st.form("Create a Filter"):
-        patch_selection = st.radio("New or Patch", ["New", "Patch"])
-        if patch_selection == "Patch":
+        patch_selection = st.toggle("Patch", value=False)
+        if patch_selection:
             filter_id_input = st.text_input("Filter ID. All other fields are [optional]", placeholder="filter_id")
         filter_description_input = st.text_input("Filter Description", placeholder="readable description")
         filter_name_input = st.text_input("Filter Name", placeholder="name")
