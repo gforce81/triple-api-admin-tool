@@ -24,6 +24,13 @@ st.divider()
 
 response = {}
 view_as_dataframe = False
+is_a_patch = False
+
+
+# function to toggle the value of is_a_patch
+def toggle_patch():
+    global is_a_patch
+    is_a_patch = not is_a_patch
 
 
 with st.expander("List Filters", expanded=False):
@@ -36,8 +43,8 @@ with st.expander("List Filters", expanded=False):
 
 with st.expander("Create a Filter", expanded=False):
     with st.form("Create a Filter"):
-        patch_selection = st.toggle("Patch", value=False)
-        if patch_selection:
+        patch_selection = st.toggle("Patch", value=False, onChange=toggle_patch(), key=None)
+        if is_a_patch:
             filter_id_input = st.text_input("Filter ID. All other fields are [optional]", placeholder="filter_id")
         filter_description_input = st.text_input("Filter Description", placeholder="readable description")
         filter_name_input = st.text_input("Filter Name", placeholder="name")
@@ -77,7 +84,7 @@ with st.expander("Create a Filter", expanded=False):
                 "offer_ids": offers
             }
         }
-        if patch_selection:
+        if is_a_patch:
             response = offer_filters.patch_offer_filters(filter_id_input, data)
         else:
             response = offer_filters.create_offer_filters(data)
