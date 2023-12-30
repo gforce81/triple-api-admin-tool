@@ -24,6 +24,7 @@ def get_list_transactions(data):
 def get_transaction(data):
     request_url = (streamlit.session_state.config['base_url'] +
                    streamlit.session_state.config['transactions_getTransaction'])
+    print(request_url)
 
     request_url = request_url.replace('{transaction_id}', data)
 

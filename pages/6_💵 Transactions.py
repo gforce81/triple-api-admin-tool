@@ -151,7 +151,7 @@ with st.expander("Create a Transaction", expanded=False):
         }
         response = cards_transactions.create_transaction(data)
 
-with st.expander("Get a Transactions", expanded=False):
+with st.expander("Get a Transaction", expanded=False):
     with st.form("Get a Transaction"):
         transaction_id_input = st.text_input("Transaction ID", placeholder="the transaction ID")
         get_transaction_button = st.form_submit_button("Retrieve")

@@ -200,7 +200,17 @@ with st.expander("Create a Merchant Location", expanded=False):
 
 with st.expander("Create an Offer", expanded=False):
     with st.form("Create an Offer"):
-        offer_activation_required_input = st.radio("Is Online", ["Yes", "No"])
+        offer_external_id_input = st.text_input("External ID", placeholder="external_id")
+        offer_description_input = st.text_area("Description", placeholder="description")
+        offer_headline_input = st.text_input("Headline", placeholder="headline")
+        offer_activation_required_input = st.radio("Activation Required", ["Yes", "No"])
+        offer_activation_required_days = st.text_input("Activation Duration in Days", placeholder="60")
+        offer_allowed_card_program_ids = st.text_input("Allowed Card Program IDs [optional]", placeholder="1,2,3")
+        offer_allowed_portfolio_manager_ids = st.text_input("Allowed Portfolio Manager IDs [optional]", placeholder="1,2,3")
+        offer_allowed_publisher_ids = st.text_input("Allowed Publisher IDs [optional]", placeholder="1,2,3")
+        offer_denied_card_program_ids = st.text_input("Denied Card Program IDs [optional]", placeholder="1,2,3")
+        offer_denied_portfolio_manager_ids = st.text_input("Denied Portfolio Manager IDs [optional]", placeholder="1,2,3")
+        offer_denied_publisher_ids = st.text_input("Denied Publisher IDs [optional]", placeholder="1,2,3")
         offer_category_input = st.selectbox("Category",
                                             ['AUTOMOTIVE', 'CHILDREN_AND_FAMILY', 'ELECTRONICS', 'ENTERTAINMENT',
                                              'FINANCIAL_SERVICES', 'FOOD', 'HEALTH_AND_BEAUTY',
@@ -208,15 +218,13 @@ with st.expander("Create an Offer", expanded=False):
                                              'TRAVEL', 'UTILITIES_AND_TELECOM'])
         offer_currency_input = st.text_input("Currency Code", placeholder="USD")
         offer_effective_date_input = st.date_input("Start Date", value=None)
+        offer_excluded_dates_input = st.text_input("Excluded Dates [optional]", placeholder="2021-01-01,2021-01-02")
         offer_expiration_date_input = st.date_input("End Date", value=None)
-        offer_external_id_input = st.text_input("External ID", placeholder="external_id")
-        offer_description_input = st.text_area("Description", placeholder="description")
-        offer_headline_input = st.text_input("Headline", placeholder="headline")
         offer_marketing_fee_currency_code_input = st.text_input("Marketing Fee Currency", placeholder="USD")
         offer_marketing_fee_type_input = st.text_input("Marketing Fee Type", placeholder="FIXED")
         offer_marketing_fee_value_input = st.text_input("Marketing Fee Value", placeholder="0")
-        offer_max_redemptions_input = st.text_input("Maximum Redemptions", value= "1/1Y", placeholder="1/1Y")
-        offer_max_reward_cumulative_input = st.text_input("Maximum Reward Cumulative [optional]", placeholder="1")
+        offer_max_redemptions_input = st.text_input("Maximum Redemptions", value="1/1Y", placeholder="1/1Y")
+        offer_max_reward_cumulative_input = st.text_input("Maximum Reward Cumulative", placeholder="1")
         offer_max_reward_input = st.text_input("Maximum Reward Per Transaction [optional]", placeholder="1")
         offer_merchant_external_id_input = st.text_input("Merchant External ID", placeholder="merchant_external_id")
         offer_merchant_website_input = st.text_input("Merchant Website", placeholder="merchant_website")
