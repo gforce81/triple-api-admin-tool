@@ -83,7 +83,23 @@ def test_amplifi(token):
         "https://wescom.rewards.tripleup.dev",
         "https://nugget-bluestone-fcu.rewards.tripleup.dev",
         "https://evergreendirect-cu.rewards.tripleup.dev",
-        "https://ourcommunity-cu.rewards.tripleup.dev"
+        "https://ourcommunity-cu.rewards.tripleup.dev",
+        "https://AMPL-DEMO.rewards.tripleup.dev",
+        "https://ATFF-ATFF.rewards.tripleup.dev",
+        "https://BANN-BANB.rewards.tripleup.dev",
+        "https://BANN-BANC.rewards.tripleup.dev",
+        "https://BANN-BAND.rewards.tripleup.dev",
+        "https://BANN-BANT.rewards.tripleup.dev",
+        "https://BLCC-BLCC.rewards.tripleup.dev",
+        "https://DSRT-DSRT.rewards.tripleup.dev",
+        "https://ILWU-ILWU.rewards.tripleup.dev",
+        "https://IRSH-IRSH.rewards.tripleup.dev",
+        "https://STCU-STCU.rewards.tripleup.dev",
+        "https://STR1-STR1.rewards.tripleup.dev",
+        "https://TRUE-TRUE.rewards.tripleup.dev",
+        "https://VRP5-OEFC.rewards.tripleup.dev",
+        "https://VRP6-4825.rewards.tripleup.dev",
+        "https://VRP9-UNTF.rewards.tripleup.dev"
     ]
     list_of_urls_with_token = []
 
