@@ -99,7 +99,8 @@ def test_amplifi(token):
         "https://TRUE-TRUE.rewards.tripleup.dev",
         "https://VRP5-OEFC.rewards.tripleup.dev",
         "https://VRP6-4825.rewards.tripleup.dev",
-        "https://VRP9-UNTF.rewards.tripleup.dev"
+        "https://VRP9-UNTF.rewards.tripleup.dev",
+        "https://NVGT-NVGT.rewards.tripleup.dev"
     ]
     list_of_urls_with_token = []
 
