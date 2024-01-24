@@ -95,6 +95,7 @@ def test_amplifi(token):
         "https://ILWU-ILWU.rewards.tripleup.dev",
         "https://IRSH-IRSH.rewards.tripleup.dev",
         "https://STCU-STCU.rewards.tripleup.dev",
+        "https://STCU-SBUS.rewards.tripleup.dev"
         "https://STR1-STR1.rewards.tripleup.dev",
         "https://TRUE-TRUE.rewards.tripleup.dev",
         "https://VRP5-OEFC.rewards.tripleup.dev",
