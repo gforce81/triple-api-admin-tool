@@ -17,7 +17,7 @@ endpoints = {
         },
         "qa": {
             "base_url": "https://api.partners.qa.tripleupdev.com",
-            "auth_url": "https://auth.qa.tripleup.dev/oauth2/token",
+            "auth_url": "https://auth.partners.qa.tripleupdev.com/oauth2/token",
             "ui_base_url": "https://ui-api.partners.qa.tripleupdev.com"
         }
     },
