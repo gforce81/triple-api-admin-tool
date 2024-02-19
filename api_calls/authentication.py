@@ -51,7 +51,7 @@ def store_config(environment):
     config['offer_display_offersCategories'] = endpoints.endpoints['offer_display']['GET_offersCategories']
     config['offer_display_offersDetailsByCardholder'] = endpoints.endpoints['offer_display']['GET_offersDetailsByCardholder']
     config['offer_display_offersDetails'] = endpoints.endpoints['offer_display']['GET_offersDetails']
-    config['offer_display_activedOffers'] = endpoints.endpoints['offer_display']['GET_activedOffers']
+    config['offer_display_activedOffers'] = endpoints.endpoints['offer_display']['GET_activatedOffers']
     config['offer_activation_activate_offer'] = endpoints.endpoints['offer_activation']['PUT_activateOffer']
     config['transactions_getListTransactions'] = endpoints.endpoints['transactions']['GET_listTransactions']
     config['transactions_getTransaction'] = endpoints.endpoints['transactions']['GET_getTransaction']
