@@ -14,7 +14,12 @@ endpoints = {
             "base_url": "https://api.tripleup.dev",
             "auth_url": "https://auth.tripleup.dev/oauth2/token",
             "ui_base_url": "https://ui-api.tripleup.dev"
-        }
+        },
+        "qa": {
+            "base_url": "https://api.partners.qa.tripleupdev.com",
+            "auth_url": "https://auth.qa.tripleup.dev/oauth2/token",
+            "ui_base_url": "https://ui-api.partners.qa.tripleupdev.com"
+        },
     },
     "card_accounts": {
         "POST_getCardAccountExternal": "/partner/card-account.by-ids",
@@ -33,7 +38,7 @@ endpoints = {
         "PUT_activateOffer": "/partner/card-accounts/{cardholder_id}/offers/activation/id/{offer_id}"
     },
     "offer_display": {
-        "GET_activedOffers": "/partner/card-accounts/{cardholder_id}/offers/activation",
+        "GET_activatedOffers": "/partner/card-accounts/{cardholder_id}/offers/activation",
         "GET_offersCategories": "/partner/card-accounts/{cardholder_id}/offers/categories",
         "POST_getOffersRecommendations": "/partner/card-accounts/{cardholder_id}/offers.recommendations",
         "POST_searchOffers": "/partner/card-accounts/{cardholder_id}/offers.search",

@@ -12,7 +12,7 @@ label_config_file = "Select a configuration file"
 label_endpoints_file = "Select an endpoints configuration file"
 label_select_env = "Select environment"
 label_button = "Generate Token"
-environments = ["sandbox", "prod", "dev"]
+environments = ["sandbox", "prod", "dev", "qa"]
 token_data = {}
 
 st.markdown(
