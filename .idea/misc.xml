@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="streamlit" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="streamlit" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (triple-api-admin-tool)" project-jdk-type="Python SDK" />
 </project>

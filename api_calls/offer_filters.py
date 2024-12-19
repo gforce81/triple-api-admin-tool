@@ -10,6 +10,7 @@ config = authentication.config
 # create a filter
 def create_offer_filters(data):
     request_url = streamlit.session_state.config['base_url'] + streamlit.session_state.config['filters_createOfferFilters']
+    print(f"Data: {data}")
     data = data
     response = core_requests.post_request(request_url, data)
     return response
